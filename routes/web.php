@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'livrosController@index');
+
+Route::get('/cadastro', 'livrosController@cadastro');
+Route::post('/cadastrar', 'livrosController@cadastrar');
+
