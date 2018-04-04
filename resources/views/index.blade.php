@@ -9,16 +9,19 @@
     <title>Document</title>
 </head>
 <body>
-<a href="/cadastro" class="btn btn-primary" >Cadastro</a>
+<div>
+
+<div class="container">
+        <div class="row">
+            <div class="col-8">
+            <h1 class="display-3">Livros</h1>
+<a href="/cadastro" class="btn btn-primary">Cadastrar</a>
     <table class="table table-striped">
     <thead>
         <tr>
             <th>Nome</th>
             <th>Autor</th>
             <th>Editora</th>
-            <th></th>
-            
-            
         </tr>
     </thead>
 
@@ -32,7 +35,7 @@
                     <a class="btn btn-primary" href="/editar/{{$v->id}}"><span class="fa fa-wrench "></span></a>    
                     <form method="post" style="display: inline;" action="/delete/{{$v->id}}">
                        {{csrf_field()}}
-                        <button class="btn btn-danger" id="btn-excluir"><span class="fa fa-trash "></span></button>
+                        <button class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar esse registro?'); return false;"><span class="fa fa-trash "></span></button>
                     </form>
                    
                 </td>
@@ -45,7 +48,9 @@
         </div>
     </div>
 </div>
-
-
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>

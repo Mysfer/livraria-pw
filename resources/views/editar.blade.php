@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-8">
-                    <h1 class="display-3">Página de atualização</h1>
+                    <h1 class="display-3">Atualização dos Dados</h1>
 
             <form action="/update" method="post">
                 {{ csrf_field() }}
