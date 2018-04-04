@@ -7,6 +7,7 @@ use App\Livro;
 
 class livrosController extends Controller
 {
+    //views
     public function index()
     {
         $dados = Livro::all();
@@ -21,6 +22,15 @@ class livrosController extends Controller
         return view('cadastro');
     }
 
+    public function editar(Livro $dados)
+    {
+
+        return view('editar', compact('dados'));
+
+    }
+
+    //dados
+
     public function cadastrar(Request $request)
     {
         $dados = new Livro;
@@ -30,6 +40,26 @@ class livrosController extends Controller
         $dados->editora = $request->editora;
         $dados->save();
 
+
         return redirect ('/');
     }
+
+    public function update(Request $request)
+    {
+        $dados = Livro::find($request->id);
+
+        $dados->nome = $request->nome;
+        $dados->autor = $request->autor;
+        $dados->editora = $request->editora;
+        $dados->save();
+
+        return redirect ('/');
+    }
+
+    public function delete(Livro $dados)
+    {
+        $dados->delete();
+        return redirect('/');
+    }
+
 }

@@ -16,3 +16,7 @@ Route::get('/', 'livrosController@index');
 Route::get('/cadastro', 'livrosController@cadastro');
 Route::post('/cadastrar', 'livrosController@cadastrar');
 
+Route::get('/editar/{dados}', 'livrosController@editar');
+Route::post('/delete/{dados}', 'livrosController@delete');
+
+Route::post('/update', 'livrosController@update');

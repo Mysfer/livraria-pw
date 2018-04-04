@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+<a href="/cadastro" class="btn btn-primary" >Cadastro</a>
     <table class="table table-striped">
     <thead>
         <tr>
@@ -28,10 +29,10 @@
                 <td>{{$v->autor}}</td>
                 <td>{{$v->editora}}</td>
                 <td>
-                    <a class="btn btn-primary" href="/editar/{{$v>id}}"><span class="fa fa-wrench "></span></a>    
+                    <a class="btn btn-primary" href="/editar/{{$v->id}}"><span class="fa fa-wrench "></span></a>    
                     <form method="post" style="display: inline;" action="/delete/{{$v->id}}">
                        {{csrf_field()}}
-                        <button class="btn btn-danger"><span class="fa fa-trash "></span></button>
+                        <button class="btn btn-danger" id="btn-excluir"><span class="fa fa-trash "></span></button>
                     </form>
                    
                 </td>
@@ -44,6 +45,7 @@
         </div>
     </div>
 </div>
+
 
 </body>
 </html>
