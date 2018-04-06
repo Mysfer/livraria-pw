@@ -35,7 +35,7 @@
             <input class="form-control" type="text" id="editora" name="editora">
         </div>
         
-        <button class="btn btn-primary" onclick="alert('Dado cadastrado com sucesso!')">Enviar</button>
+        <button class="btn btn-primary">Enviar</button>
     </form>
             
             </div>

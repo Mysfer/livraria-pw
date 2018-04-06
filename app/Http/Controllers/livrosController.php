@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Livro;
 
+
 class livrosController extends Controller
 {
     //views
@@ -41,7 +42,7 @@ class livrosController extends Controller
         $dados->save();
 
 
-        return redirect ('/');
+        return redirect('/')->with('add', $request->nome);
     }
 
     public function update(Request $request)
@@ -53,13 +54,13 @@ class livrosController extends Controller
         $dados->editora = $request->editora;
         $dados->save();
 
-        return redirect ('/');
+        return redirect ('/')->with('update', $dados->nome);
     }
 
     public function delete(Livro $dados)
     {
         $dados->delete();
-        return redirect('/');
+        return redirect('/')->with('remove', $dados->nome);
     }
 
 }
