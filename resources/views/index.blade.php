@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://bootswatch.com/4/lumen/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <title>Document</title>
     </head>
@@ -29,14 +29,15 @@
                     @else
                         <div class="alert alert-primary">Livro {{session('update')}}, editado com sucesso</div>
                     @endif
-
+                        
                         <div class="row">
                             <div class="col-8">
-                            <h1 class="display-3">Livros</h1>
-                            <p>
+                            <h1 class="display-3">Livros</h1> 
+                            <div class="text-center">
                                 <a href="/cadastro" class="btn btn-primary">Cadastrar</a>
-                                 </p>
-                                 <table class="table table-striped">
+                            </div>    
+                                <p>    
+                                 <table class="table table-striped table-hover table-primary">
                                  <thead>
                                 <tr>
                             <th>Nome</th>
@@ -44,7 +45,6 @@
                             <th>Editora</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         @foreach($dados as $v)
                             <tr>
